@@ -1,4 +1,4 @@
-package springpetclinic;
+package br.com.vizone.springpetclinic;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
