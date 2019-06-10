@@ -15,7 +15,7 @@
 
     <groupId>br.com.vizone</groupId>
     <artifactId>spring-petclinic</artifactId>
-    <version>0.0.3-SNAPSHOT</version>
+    <version>0.0.3</version>
 
     <name>spring-petclinic</name>
     <description>Pet Clinic Project</description>
@@ -48,6 +48,6 @@
 
     <scm>
         <developerConnection>scm:git:https://github.com/gvizone/spring-petclininc.git</developerConnection>
-      <tag>HEAD</tag>
+      <tag>spring-petclinic-0.0.3</tag>
   </scm>
 </project>
