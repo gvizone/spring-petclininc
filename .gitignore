@@ -1,9 +1,10 @@
 HELP.md
-/target/
+*/target/
 !.mvn/wrapper/maven-wrapper.jar
 
 target/*
 .settings/*
+.settings
 .classpath
 .project
 .factorypath
@@ -11,8 +12,10 @@ target/*
 .idea
 *.iml
 /target
+*.class
 .sts4-cache/
 .vscode/*
+.vscode/
 !.vscode/settings.json
 !.vscode/tasks.json
 !.vscode/launch.json
