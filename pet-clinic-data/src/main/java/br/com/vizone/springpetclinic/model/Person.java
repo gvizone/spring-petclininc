@@ -1,6 +1,7 @@
 package br.com.vizone.springpetclinic.model;
 
 public class Person extends BaseEntity{
+    private static final long serialVersionUID = 1L;
     private String firstName;
     private String lastName;
 
