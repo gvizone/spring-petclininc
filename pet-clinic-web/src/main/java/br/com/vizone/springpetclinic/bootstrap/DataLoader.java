@@ -7,8 +7,6 @@ import br.com.vizone.springpetclinic.model.Owner;
 import br.com.vizone.springpetclinic.model.Vet;
 import br.com.vizone.springpetclinic.services.OwnerService;
 import br.com.vizone.springpetclinic.services.VetService;
-import br.com.vizone.springpetclinic.services.map.OwnerServiceMap;
-import br.com.vizone.springpetclinic.services.map.VetServiceMap;
 
 /**
  * DataLoader
@@ -18,10 +16,10 @@ public class DataLoader implements CommandLineRunner{
     private final OwnerService ownerService;
     private final VetService vetService;
 
-    public DataLoader() {
-        ownerService = new OwnerServiceMap();
-        vetService = new VetServiceMap();
-    }
+    public DataLoader(OwnerService ownerService, VetService vetService) {
+        this.ownerService = ownerService;
+        this.vetService = vetService;
+    }    
 
     @Override
     public void run(String... args) throws Exception {
