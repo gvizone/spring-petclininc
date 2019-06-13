@@ -2,10 +2,9 @@ package br.com.vizone.springpetclinic.services.map;
 
 import br.com.vizone.springpetclinic.model.Vet;
 import br.com.vizone.springpetclinic.services.VetService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetService {
@@ -27,7 +26,7 @@ public class VetServiceMap extends AbstractMapService<Vet, Long> implements VetS
 
     @Override
     public Vet save(Vet object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override

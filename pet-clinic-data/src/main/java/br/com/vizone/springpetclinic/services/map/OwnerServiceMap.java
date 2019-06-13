@@ -2,10 +2,9 @@ package br.com.vizone.springpetclinic.services.map;
 
 import br.com.vizone.springpetclinic.model.Owner;
 import br.com.vizone.springpetclinic.services.OwnerService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
-
-import org.springframework.stereotype.Service;
 
 @Service
 public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements OwnerService {
@@ -27,7 +26,7 @@ public class OwnerServiceMap extends AbstractMapService<Owner, Long> implements 
 
     @Override
     public Owner save(Owner object) {
-        return super.save(object.getId(), object);
+        return super.save(object);
     }
 
     @Override
