@@ -2,9 +2,11 @@ package br.com.vizone.springpetclinic.services.map;
 
 import br.com.vizone.springpetclinic.model.PetType;
 import br.com.vizone.springpetclinic.services.PetTypeService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
+@Service
 public class PetTypeMapService extends AbstractMapService<PetType, Long> implements PetTypeService {
     @Override
     public Set<PetType> findAll() {
