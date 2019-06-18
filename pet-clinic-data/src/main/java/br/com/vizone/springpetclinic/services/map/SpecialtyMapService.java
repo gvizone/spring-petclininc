@@ -1,11 +1,13 @@
 package br.com.vizone.springpetclinic.services.map;
 
 import br.com.vizone.springpetclinic.model.Specialty;
-import br.com.vizone.springpetclinic.services.SpecialtiesService;
+import br.com.vizone.springpetclinic.services.SpecialtyService;
+import org.springframework.stereotype.Service;
 
 import java.util.Set;
 
-public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtiesService {
+@Service
+public class SpecialtyMapService extends AbstractMapService<Specialty, Long> implements SpecialtyService {
     @Override
     public Set<Specialty> findAll() {
         return super.findAll();
