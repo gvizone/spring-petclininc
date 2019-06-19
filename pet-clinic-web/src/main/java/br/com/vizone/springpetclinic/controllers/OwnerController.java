@@ -1,10 +1,9 @@
 package br.com.vizone.springpetclinic.controllers;
 
+import br.com.vizone.springpetclinic.services.OwnerService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import br.com.vizone.springpetclinic.services.OwnerService;
 
 /**
  * OwnerController
@@ -23,5 +22,9 @@ public class OwnerController {
         model.addAttribute("owners", ownerService.findAll());
         return "owners/index";
     }
-    
+
+    @RequestMapping("/find")
+    public String findOwners() {
+        return "notimplemented";
+    }
 }
