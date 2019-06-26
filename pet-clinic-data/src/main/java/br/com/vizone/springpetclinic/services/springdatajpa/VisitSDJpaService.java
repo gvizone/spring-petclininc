@@ -1,4 +1,4 @@
-package br.com.vizone.springpetclinic.services.map;
+package br.com.vizone.springpetclinic.services.springdatajpa;
 
 import br.com.vizone.springpetclinic.model.Visit;
 import br.com.vizone.springpetclinic.repositories.VisitRepository;
