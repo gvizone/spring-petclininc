@@ -1,10 +1,7 @@
 package br.com.vizone.springpetclinic.bootstrap;
 
 import br.com.vizone.springpetclinic.model.*;
-import br.com.vizone.springpetclinic.services.OwnerService;
-import br.com.vizone.springpetclinic.services.PetTypeService;
-import br.com.vizone.springpetclinic.services.SpecialtyService;
-import br.com.vizone.springpetclinic.services.VetService;
+import br.com.vizone.springpetclinic.services.*;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
@@ -19,12 +16,15 @@ public class DataLoader implements CommandLineRunner{
     private final VetService vetService;
     private final PetTypeService petTypeService;
     private final SpecialtyService specialtyService;
+    private final VisitService visitService;
 
-    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService, SpecialtyService specialtyService) {
+    public DataLoader(OwnerService ownerService, VetService vetService, PetTypeService petTypeService,
+                      SpecialtyService specialtyService, VisitService visitService) {
         this.ownerService = ownerService;
         this.vetService = vetService;
         this.petTypeService = petTypeService;
         this.specialtyService = specialtyService;
+        this.visitService = visitService;
     }
 
     @Override
@@ -78,6 +78,12 @@ public class DataLoader implements CommandLineRunner{
         owner2.setCity("São Paulo");
         owner2.setTelephone("2342342376");
         ownerService.save(owner2);
+
+        Visit catVisit = new Visit();
+        catVisit.setPet(mikesPet);
+        catVisit.setDate(LocalDate.now());
+        catVisit.setDescription("Sneezy Kitty");
+        visitService.save(catVisit);
 
         Pet annasCat = new Pet();
         annasCat.setPetType(savedCatPetType);
